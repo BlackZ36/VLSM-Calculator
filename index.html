@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SUBNETTING TOOL - BLACKZ</title>
+
+
+    <link rel="stylesheet" id="convertkit-button-css" href="./assets/button.css" media="all" />
+    <link rel="stylesheet" id="convertkit-form-css" href="./assets/form.css" media="all" />
+    <link rel="stylesheet" id="eeb-css-frontend-css" href="./assets/style.css" media="all" />
+    <link rel="stylesheet" id="generate-style-grid-css" href="./assets/unsemantic-grid.min.css" media="all" />
+    <link rel="stylesheet" id="generate-style-css" href="./assets/style.min.css" media="all" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" media="all"></script>
+
+ 
+  </head>
+  <body class="page-template-default page page-id-213 wp-custom-logo wp-embed-responsive" itemtype="https://schema.org/WebPage" itemscope="">
+    
+    <div class="site grid-container container hfeed grid-parent" id="page">
+      <div class="site-content" style="margin: 50px;" id="content">
+        <div class="content-area" id="primary">
+          <main class="site-main" id="main">
+            <article id="post-213" class="post-213 page type-page status-publish" itemtype="https://schema.org/CreativeWork" itemscope="">
+              <div class="inside-article">
+                <header class="entry-header">
+                  <h1 style="text-align: center;  " class="entry-title" itemprop="headline">SUBNETTING TOOL</h1>
+                </header>
+                <br class="entry-content" itemprop="text">
+                  <br onsubmit="return false;">
+                    <p>
+                      <b>Step 1 - ENTER IP ADDRESS</b>
+                    </br>
+                  </br>
+                      <input style="width: 250px;"   type="text" id="input_network" value="172.30.0.0/16" />
+                      <span id="not_valid_ip" style="background-color: yellow"></span>
+                    </p>
+                    <b>Step 2- ENTER LAN AND WAN NUMBERS</b>
+                  </br>
+                    <br/>
+                    <input style="width: 250px;" type="number" id="input_num_of_subnets" min="2" max="999" maxlength="3" placeholder="Number of LAN and WAN" /> 
+                    <button style="margin-left: 30px;" onclick="change_subnet_number();">Add</button>
+                  </br>
+                    <span id="nets" style="display: none">4</span>
+                  </br>
+                  </form>
+                  <b>Step 3 - ENTER EACH LAN AND WAN HOSTS</b>
+                  <br/>
+                  <p id="subnet_pargraph">
+                    <br/>
+                    <input style="width: 250px;" type="text" id="name1" value="Lan 1" /> <input style="width: 250px;" type="text" id="hosts1" placeholder="Host numbers" tabindex="1" /><br />
+                    <input style="width: 250px;" type="text" id="name2" value="Lan 2" /> <input style="width: 250px;" type="text" id="hosts2" placeholder="Host numbers" tabindex="2" /><br />
+                    </p>
+                  <button onclick="vlsm();">Calculate</button> 
+                  <button onclick="clear_form();">Clear</button>
+                  <p id="ans"></p>
+                </div>
+              </div>
+            </article>
+          </main>
+        </div>
+        
+      </div>
+    </div>
+    
+    <script src="./assets/vlsm.js" id="vlsm-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+  </body>
+</html>
